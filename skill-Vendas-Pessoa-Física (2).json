@@ -1,0 +1,825 @@
+{
+  "intents": [
+    {
+      "intent": "agradecimento",
+      "examples": [
+        {
+          "text": "muito obrigado"
+        },
+        {
+          "text": "obrigada"
+        },
+        {
+          "text": "obrigadíssimo"
+        },
+        {
+          "text": "obrigado"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "tks"
+        },
+        {
+          "text": "valeu"
+        }
+      ],
+      "description": "A intenção de demonstrar a gratidão para o atendente."
+    },
+    {
+      "intent": "climaTempo",
+      "examples": [
+        {
+          "text": "1"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "compra-produto",
+      "examples": [
+        {
+          "text": "10"
+        },
+        {
+          "text": "Claro, vou te ajudar. Irei fazer algumas perguntas para selecionar o melhor produto para você, tudo bem?"
+        },
+        {
+          "text": "Eu queria ajuda para comprar um celular"
+        },
+        {
+          "text": "Gostaria de comprar um celular"
+        },
+        {
+          "text": "Gostaria de comprar um smartwatch, pode me ajudar?"
+        },
+        {
+          "text": "Gostaria de saber qual o melhor tablet para trabalhar com desenho?"
+        },
+        {
+          "text": "Me ajude a comprar um tablet?"
+        },
+        {
+          "text": "Qual celular você recomenda para gravar filmes para o youtube?"
+        },
+        {
+          "text": "Qual o melhor smartwatch para quem faz acadêmia?"
+        },
+        {
+          "text": "Você pode me ajudar a comprar um celular?"
+        }
+      ],
+      "description": "Auxiliar o usuário a escolher o melhor produto para a compra"
+    },
+    {
+      "intent": "ConsultarFilme",
+      "examples": [
+        {
+          "text": "3"
+        }
+      ],
+      "description": "3"
+    },
+    {
+      "intent": "DialogodeCompra",
+      "examples": [
+        {
+          "text": "2"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "entrega_produto",
+      "examples": [
+        {
+          "text": "quantos dias o produto chegara na minha casa moro em São Paulo?"
+        },
+        {
+          "text": "quero saber qual é o prazo de entrega?"
+        },
+        {
+          "text": "São Paulo"
+        }
+      ],
+      "description": "Depois de finalizado a compra entra a parte da logista para entregar o produto"
+    },
+    {
+      "intent": "escolhaOpcoes",
+      "examples": [
+        {
+          "text": "começar"
+        },
+        {
+          "text": "oi"
+        },
+        {
+          "text": "ola"
+        },
+        {
+          "text": "Olá"
+        },
+        {
+          "text": "/start"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "reserva_produto",
+      "examples": [
+        {
+          "text": "Coloquei o produto no carrinho. Ele está reservado?"
+        },
+        {
+          "text": "prazo para entrega de celulares é diferente"
+        },
+        {
+          "text": "prazo para entrega de celulares é diferente?"
+        },
+        {
+          "text": "Tenho a reserva do produto garantida quando adiciono ele no carrinho?"
+        },
+        {
+          "text": "Tenho a reserva do produto garantida, quando adiciono ele no carrinho?"
+        }
+      ],
+      "description": "Intenção referente a dúvidas relacionadas a reserva de produtos no site."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "cidade",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Rio de Janeiro",
+          "synonyms": [
+            "cidade maravilhosa",
+            "rj"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Salvador",
+          "synonyms": [
+            "cidade da alegria",
+            "roma negra"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "São Paulo",
+          "synonyms": [
+            "cidade da garoa",
+            "sampa",
+            "sp",
+            "terra da garoa"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "marca",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Apple",
+          "synonyms": [
+            "ios",
+            "iphone"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Lenovo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "LG",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Motorola",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Multilaser",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Samsung",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Xiaomi",
+          "synonyms": [
+            "Redmi"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sim-nao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "sim",
+          "synonyms": [
+            "claro",
+            "de acordo",
+            "ok",
+            "positivo"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-currency",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Valor_maximo",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "1000",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "2000",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "3000",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "4000",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "5000",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "6000",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado a você"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_7_1623256554579",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1623256554579",
+      "previous_sibling": "handler_1_1623256554579"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "E você tem algum valor máximo para a compra do produto?  \nDigite no formato:  R$ 1.000,00"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_1_1622662888229",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1622662888229",
+      "previous_sibling": "handler_7_1622662888229"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1623256554579",
+      "context": {
+        "agradecimento": "@agradecimento"
+      },
+      "conditions": "@agradecimento",
+      "event_name": "input",
+      "dialog_node": "handler_1_1623256554579"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Claro, vou te ajudar. Irei fazer algumas perguntas para selecionar o melhor produto para você, tudo bem?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1622662646109",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1622662646118",
+      "previous_sibling": "handler_3_1622662646118"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Resposta inválida, digite sim para continuar ou cancelar para voltar ao menu inicial."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_6_1622662646109",
+      "context": {
+        "s": ""
+      },
+      "conditions": "!$sn",
+      "event_name": "nomatch",
+      "dialog_node": "handler_2_1623172433652",
+      "previous_sibling": "handler_2_1622662646118"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Marca digitada inválida. \nTemos em estoque as seguintes marcas:\n- Apple;\n- Lenovo;\n- LG;\n- Motorola;\n- Multilaser;\n- Samsung;\n- Xiaomi;\n\nOu digite cancelar que te transfiro para o menu inicial."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_7_1622662809930",
+      "conditions": "!$marca",
+      "event_name": "nomatch",
+      "dialog_node": "handler_2_1623254433421",
+      "previous_sibling": "handler_5_1622662809930"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1622662646109",
+      "context": {
+        "sn": "@sim-nao"
+      },
+      "conditions": "@sim-nao",
+      "event_name": "input",
+      "dialog_node": "handler_3_1622662646118"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Você tem preferência por alguma marca de celular?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_7_1622662809930",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1622662809930",
+      "previous_sibling": "handler_8_1622662809930"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu tenho um celular $marca que custa até $moeda reais. Gostaria de adicioná-lo no carrinho?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_2_1622662942993",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1622662942994",
+      "previous_sibling": "handler_9_1622662942994"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1622662888229",
+      "context": {
+        "moeda": "@sys-currency"
+      },
+      "conditions": "@sys-currency",
+      "event_name": "input",
+      "dialog_node": "handler_7_1622662888229"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1622662809930",
+      "context": {
+        "marca": "@marca"
+      },
+      "conditions": "@marca",
+      "event_name": "input",
+      "dialog_node": "handler_8_1622662809930"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Respostá inválida, sim para adicionar o carrinho ou cancelar para voltar ao menu inicial."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_2_1622662942993",
+      "conditions": "!$sn",
+      "event_name": "nomatch",
+      "dialog_node": "handler_8_1623255683934",
+      "previous_sibling": "handler_5_1622662942994"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1622662942993",
+      "context": {
+        "sim_nao": "@sim-nao"
+      },
+      "conditions": "@sim-nao",
+      "event_name": "input",
+      "dialog_node": "handler_9_1622662942994"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Valor digitado é inválido, digite no formato R$ 1.000,00 ou digite cancelar que te transfiro para o menu inicial."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_1_1622662888229",
+      "conditions": "!@sys-currency",
+      "event_name": "nomatch",
+      "dialog_node": "handler_9_1623254857700",
+      "previous_sibling": "handler_1_1622662888229"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tempo"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1623094750603",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1623095611668"
+      },
+      "conditions": "#climaTempo",
+      "dialog_node": "node_1_1623095077543"
+    },
+    {
+      "type": "standard",
+      "title": "Else Compra Produto",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "teste"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1622662566360",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1622662566360"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_1_1623172023243"
+    },
+    {
+      "type": "standard",
+      "title": "Else Escolha",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Opção digitada é inválida.\nPara continuar por favor, digite o número correspondente ao assunto:\n\n1 - Clima Tempo;\n2 - Dialogo de Compra;\n3 - Consultar Filmes;"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1623094750603",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1623094750603"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_3_1623170710120",
+      "previous_sibling": "node_4_1623170938224"
+    },
+    {
+      "type": "standard",
+      "title": "If Escolhe opção",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá, eu sou o NomeDoChatBot digite o número correspondente ao assunto que deseja falar comigo:\n\n1 - Clima Tempo;\n2 - Diálogo de Compra;\n3 - Consultar Filmes;"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#escolhaOpcoes",
+      "dialog_node": "node_4_1623094750603"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Filme"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1623094750603",
+      "conditions": "#ConsultarFilme",
+      "dialog_node": "node_4_1623170938224",
+      "previous_sibling": "node_7_1623095238065"
+    },
+    {
+      "type": "standard",
+      "title": "Cidade",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Digite a cidade:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1623095077543",
+      "dialog_node": "node_5_1623095611668"
+    },
+    {
+      "type": "standard",
+      "title": "Agradecimento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado você pela preferência"
+              },
+              {
+                "text": "Posso ajudar em algo mais?"
+              },
+              {
+                "text": "Você detona!!"
+              },
+              {
+                "text": "Manda muito!!"
+              },
+              {
+                "text": "Melhor cliente não tem!!!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#agradecimento",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1622661219353",
+      "previous_sibling": "node_4_1623094750603"
+    },
+    {
+      "type": "frame",
+      "title": "Compra de produto",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O produto foi adicionado com sucesso ao seu carrinho"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1623095238065",
+      "conditions": "#compra-produto",
+      "dialog_node": "node_6_1622662566360"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "[DIÁLOGO DE COMPRAS]\n\nPara continuar digite uma das opções:\n\n- Você pode me ajudar a comprar um celular?\n- Gostaria de comprar um celular\n- Eu queria ajuda para comprar um celular\n\nOu digite cancelar a qualquer momento que te transfiro para o menu inicial.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1623094750603",
+      "conditions": "#DialogodeCompra",
+      "dialog_node": "node_7_1623095238065",
+      "previous_sibling": "node_1_1623095077543"
+    },
+    {
+      "type": "standard",
+      "title": "Else Dialogo compra",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Opção digitada é inválida.\nDigite uma das opções:\n\n- Você pode me ajudar a comprar um celular?\n- Gostaria de comprar um celular\n- Eu queria ajuda para comprar um celular\n\nOu digite cancelar a qualquer momento para voltar ao menu inicial.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1622662566360",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1623095238065"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_7_1623171648651",
+      "previous_sibling": "node_1_1623172023243"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1622662566360",
+      "variable": "$moeda",
+      "dialog_node": "slot_1_1622662888229",
+      "previous_sibling": "slot_7_1622662809930"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1622662566360",
+      "variable": "$sim_nao",
+      "dialog_node": "slot_2_1622662942993",
+      "previous_sibling": "slot_1_1622662888229"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1622662566360",
+      "variable": "$sn",
+      "conditions": "true",
+      "dialog_node": "slot_6_1622662646109",
+      "previous_sibling": "node_7_1623171648651"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1622662566360",
+      "variable": "$marca",
+      "dialog_node": "slot_7_1622662809930",
+      "previous_sibling": "slot_6_1622662646109"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1622662566360",
+      "variable": "$agradecimento",
+      "dialog_node": "slot_7_1623256554579",
+      "previous_sibling": "slot_2_1622662942993"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "Vendas Pessoa Física",
+  "language": "pt-br",
+  "description": "Essa skill ajuda o cliente a encontrar o melhor aparelho tecnológico desejado."
+}
